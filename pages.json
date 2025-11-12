@@ -16,6 +16,22 @@
 	        "navigationBarTextStyle": "black"
 	      }
 	    },
+		 {
+		      "path": "pages/visitor/center",
+		      "style": {
+		        "navigationBarTitleText": "访客中心",
+		        "navigationBarBackgroundColor": "#ffffff",
+		        "navigationBarTextStyle": "black"
+		      }
+		    },
+		    {
+		      "path": "pages/visitor/apply",
+		      "style": {
+		        "navigationBarTitleText": "预约申请",
+		        "navigationBarBackgroundColor": "#ffffff",
+		        "navigationBarTextStyle": "black"
+		      }
+		    },
 	    {
 	      "path": "pages/teacher/login",
 	      "style": {

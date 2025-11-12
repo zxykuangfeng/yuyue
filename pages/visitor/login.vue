@@ -65,6 +65,10 @@ export default {
         return;
       }
       uni.showToast({ title: '登录成功', icon: 'success' });
+	  
+	  setTimeout(() => {
+	          uni.redirectTo({ url: '/pages/visitor/center' });
+	        }, 500);
     }
   },
   onUnload() {
