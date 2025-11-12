@@ -1,17 +1,37 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-app"
-		}
-	}],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"app-plus": {
-			"background": "#efeff4"
-		}
-	}
+	"pages": [
+	    {
+	      "path": "pages/index/index",
+	      "style": {
+	        "navigationBarTitleText": "访客预约",
+	        "navigationBarBackgroundColor": "#ffffff",
+	        "navigationBarTextStyle": "black"
+	      }
+	    },
+	    {
+	      "path": "pages/visitor/login",
+	      "style": {
+	        "navigationBarTitleText": "访客登录",
+	        "navigationBarBackgroundColor": "#ffffff",
+	        "navigationBarTextStyle": "black"
+	      }
+	    },
+	    {
+	      "path": "pages/teacher/login",
+	      "style": {
+	        "navigationBarTitleText": "在校师生登录",
+	        "navigationBarBackgroundColor": "#ffffff",
+	        "navigationBarTextStyle": "black"
+	      }
+	    }
+	  ],
+	  "globalStyle": {
+	    "navigationBarTextStyle": "black",
+	    "navigationBarTitleText": "访客预约",
+	    "navigationBarBackgroundColor": "#F8F8F8",
+	    "backgroundColor": "#F8F8F8",
+	    "app-plus": {
+	      "background": "#efeff4"
+	    }
+	  }
 }
