@@ -25,6 +25,14 @@
 		      }
 		    },
 			{
+			      "path": "pages/visitor/profile",
+			      "style": {
+			        "navigationBarTitleText": "我的信息",
+			        "navigationBarBackgroundColor": "#ffffff",
+			        "navigationBarTextStyle": "black"
+			      }
+			    },
+			{
 			      "path": "pages/visitor/records",
 			      "style": {
 			        "navigationBarTitleText": "预约记录",

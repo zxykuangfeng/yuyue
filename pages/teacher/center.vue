@@ -24,6 +24,10 @@
         </view>
       </view>
     </view>
+	<view class="home__footer">
+		  			<image class="footer-logo" src="/static/logo.png" mode="widthFix"></image>
+		  			<text class="footer-text">盐城幼儿师范高等专科学校</text>
+		  		</view>
   </view>
 </template>
 
@@ -76,6 +80,8 @@ export default {
   padding: 48rpx 32rpx 64rpx;
   box-sizing: border-box;
   background: linear-gradient(180deg, #ebf4ff, #f8fbff 45%, #ffffff);
+  display: flex;         /* 必须 */
+   flex-direction: column;/* 必须，纵向布局 */
 }
 
 .header {
@@ -158,5 +164,25 @@ export default {
   font-size: 30rpx;
   color: #1c2333;
   font-weight: 500;
+}
+
+.home__footer {
+  margin-top: auto;   /* 自动推到最底部 */
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.footer-logo {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.footer-text {
+  font-size: 30rpx;
+  color: #1c71d8;
+  font-weight: 600;
 }
 </style>

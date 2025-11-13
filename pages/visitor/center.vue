@@ -5,19 +5,28 @@
       <view class="menu-title">快捷入口</view>
       <view class="menu-grid">
         <view class="menu-item" @click="goApply">
-          <image class="menu-item__icon" src="/static/c1.png" mode="aspectFill" />
+          <image class="menu-item__icon" src="/static/fangke.png" mode="aspectFill" />
           <text class="menu-item__text">访客业务</text>
         </view>
         <view class="menu-item" @click="goRecords">
-          <image class="menu-item__icon" src="/static/c3.png" mode="aspectFill" />
+          <image class="menu-item__icon" src="/static/yuyue.png" mode="aspectFill" />
           <text class="menu-item__text">预约记录</text>
         </view>
+		 <view class="menu-item" @click="goProfile">
+		          <image class="menu-item__icon" src="/static/user.png" mode="aspectFill" />
+		          <text class="menu-item__text">我的信息</text>
+		        </view>
         <view class="menu-item" @click="logout">
-          <image class="menu-item__icon" src="/static/c2.png" mode="aspectFill" />
+          <image class="menu-item__icon" src="/static/logoff.png" mode="aspectFill" />
           <text class="menu-item__text">注销账号</text>
         </view>
       </view>
     </view>
+	
+	<view class="home__footer">
+		  			<image class="footer-logo" src="/static/logo.png" mode="widthFix"></image>
+		  			<text class="footer-text">盐城幼儿师范高等专科学校</text>
+		  		</view>
   </view>
 </template>
 
@@ -30,6 +39,9 @@ export default {
     goRecords() {
       uni.navigateTo({ url: '/pages/visitor/records' });
     },
+	 goProfile() {
+	      uni.navigateTo({ url: '/pages/visitor/profile' });
+	    },
     logout() {
       uni.showModal({
         title: '提示',
@@ -56,6 +68,8 @@ export default {
   padding: 48rpx 32rpx 64rpx;
   box-sizing: border-box;
   background: linear-gradient(180deg, #ebf4ff, #f8fbff 45%, #ffffff);
+    display: flex;         /* 必须 */
+    flex-direction: column;/* 必须，纵向布局 */
 }
 
 .banner {
@@ -98,8 +112,8 @@ export default {
 }
 
 .menu-item__icon {
-  width: 96rpx;
-  height: 96rpx;
+  width: 56rpx;
+  height: 56rpx;
   margin-bottom: 16rpx;
 }
 
@@ -107,5 +121,24 @@ export default {
   font-size: 30rpx;
   color: #1c2333;
   font-weight: 500;
+}
+.home__footer {
+  margin-top: auto;
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.footer-logo {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.footer-text {
+  font-size: 30rpx;
+  color: #1c71d8;
+  font-weight: 600;
 }
 </style>

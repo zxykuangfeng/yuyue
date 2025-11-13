@@ -13,7 +13,13 @@
 	        在校师生如需协助访客预约，请提前与访客确认行程并做好信息审核。
 	      </text>
 	    </view>
+		 <view class="home__footer">
+	  			<image class="footer-logo" src="/static/logo.png" mode="widthFix"></image>
+	  			<text class="footer-text">盐城幼儿师范高等专科学校</text>
+	  		</view>
 	  </view>
+	  
+	 
 </template>
 
 <script>
@@ -34,6 +40,8 @@ export default {
   padding: 48rpx 32rpx;
   background: #f5f7fa;
   box-sizing: border-box;
+   display: flex;         /* 必须 */
+    flex-direction: column;/* 必须，纵向布局 */
 }
 
 .home__banner {
@@ -81,5 +89,24 @@ export default {
   font-size: 30rpx;
   line-height: 48rpx;
   color: #4b5563;
+}
+.home__footer {
+  margin-top: auto;   /* 自动推到最底部 */
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.footer-logo {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.footer-text {
+  font-size: 30rpx;
+  color: #1c71d8;
+  font-weight: 600;
 }
 </style>
