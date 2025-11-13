@@ -1,6 +1,6 @@
 <template>
   <view class="page">
-    <image class="banner" src="/static/logo.png" mode="widthFix" />
+    <image class="banner" src="/static/top.png" mode="widthFix" />
     <view class="card">
       <view class="card__title">在校师生登录</view>
       <view class="tabs">

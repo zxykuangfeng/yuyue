@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-	    <image class="home__banner" src="/static/logo.png" mode="widthFix" />
+	    <image class="home__banner" src="/static/top.png" mode="widthFix" />
 	    <view class="home__buttons">
 	      <button class="primary-button" @click="goVisitor">访客申请</button>
 	      <button class="primary-button" @click="goTeacher">在校师生</button>

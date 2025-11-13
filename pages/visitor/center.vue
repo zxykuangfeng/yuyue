@@ -1,12 +1,16 @@
 <template>
   <view class="page">
-    <image class="banner" src="/static/logo.png" mode="widthFix" />
+    <image class="banner" src="/static/top.png" mode="widthFix" />
     <view class="menu-card">
       <view class="menu-title">快捷入口</view>
       <view class="menu-grid">
         <view class="menu-item" @click="goApply">
           <image class="menu-item__icon" src="/static/c1.png" mode="aspectFill" />
           <text class="menu-item__text">访客业务</text>
+        </view>
+        <view class="menu-item" @click="goRecords">
+          <image class="menu-item__icon" src="/static/c3.png" mode="aspectFill" />
+          <text class="menu-item__text">预约记录</text>
         </view>
         <view class="menu-item" @click="logout">
           <image class="menu-item__icon" src="/static/c2.png" mode="aspectFill" />
@@ -22,6 +26,9 @@ export default {
   methods: {
     goApply() {
       uni.navigateTo({ url: '/pages/visitor/apply' });
+    },
+    goRecords() {
+      uni.navigateTo({ url: '/pages/visitor/records' });
     },
     logout() {
       uni.showModal({
@@ -53,14 +60,12 @@ export default {
 
 .banner {
   width: 100%;
-  border-radius: 24rpx;
   margin-bottom: 48rpx;
   background: #ffffff;
 }
 
 .menu-card {
   background: #ffffff;
-  border-radius: 24rpx;
   padding: 40rpx 32rpx 16rpx;
   box-shadow: 0 24rpx 48rpx rgba(45, 140, 240, 0.12);
 }
@@ -85,7 +90,6 @@ export default {
   justify-content: center;
   padding: 32rpx 24rpx;
   background: linear-gradient(135deg, rgba(45, 140, 240, 0.12), rgba(33, 150, 243, 0.08));
-  border-radius: 24rpx;
   transition: transform 0.2s ease;
 }
 
