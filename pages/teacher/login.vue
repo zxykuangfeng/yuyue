@@ -100,14 +100,31 @@ export default {
         uni.showToast({ title: '请完善登录信息', icon: 'none' });
         return;
       }
-      uni.showToast({ title: '登录成功', icon: 'success' });
+       const tail = this.phoneForm.phone.slice(-4);
+            const name = tail ? `在校师生${tail}` : '在校师生';
+            this.handleLoginSuccess(name, { phone: this.phoneForm.phone });
     },
     submitAccount() {
       if (!this.accountForm.username || !this.accountForm.password) {
         uni.showToast({ title: '请输入账号和密码', icon: 'none' });
         return;
       }
+	  const name = this.accountForm.username || '在校师生';
+	        this.handleLoginSuccess(name, {
+	          username: this.accountForm.username
+	        });
+	      },
+		 handleLoginSuccess(name, extra = {}) {
+		      this.clearTimer();	
       uni.showToast({ title: '登录成功', icon: 'success' });
+	  setTimeout(() => {
+	          const profile = {
+	            name,
+	            ...extra
+	          };
+	          uni.setStorageSync('teacherProfile', profile);
+	          uni.reLaunch({ url: '/pages/teacher/center' });
+	        }, 600);
     }
   },
   onUnload() {

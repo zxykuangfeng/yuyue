@@ -9,6 +9,9 @@
     <view class="form-card">
       <view class="form-title">预约信息填写</view>
       <uni-forms ref="applyForm" :modelValue="formData" :rules="rules" label-width="200rpx">
+		  <uni-forms-item v-if="formData.hostName" label="被访人" name="hostName">
+		            <uni-easyinput v-model="formData.hostName" disabled placeholder="" />
+		          </uni-forms-item>
         <uni-forms-item label="所在校区" name="campus">
           <uni-data-select :localdata="campusOptions" v-model="formData.campus" placeholder="请选择校区" />
         </uni-forms-item>
@@ -54,6 +57,7 @@ export default {
   data() {
     return {
       formData: {
+		   hostName: '',
         campus: '',
         name: '',
         idNumber: '',
@@ -73,6 +77,7 @@ export default {
         { text: '访客入校', value: 'visitor' }
       ],
       rules: {
+		   hostName: {},
         campus: { required: true, errorMessage: '请选择所在校区' },
         name: { required: true, errorMessage: '请输入姓名' },
         idNumber: { required: true, errorMessage: '请输入身份证号' },
@@ -84,6 +89,21 @@ export default {
       }
     };
   },
+    onLoad(options) {
+      if (options && options.host) {
+        const host = decodeURIComponent(options.host);
+        this.formData.hostName = host;
+        this.$nextTick(() => {
+          this.$refs.applyForm && this.$refs.applyForm.setValue('hostName', host);
+        });
+      }
+    },
+    onUnload() {
+      if (this.formData.hostName) {
+        this.formData.hostName = '';
+        this.$refs.applyForm && this.$refs.applyForm.setValue('hostName', '');
+      }
+    },
   methods: {
     onFaceUpload(event) {
       const { tempFiles = [], tempFilePaths = [] } = event || {};

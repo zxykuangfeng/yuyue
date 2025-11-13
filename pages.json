@@ -47,7 +47,31 @@
 	        "navigationBarBackgroundColor": "#ffffff",
 	        "navigationBarTextStyle": "black"
 	      }
-	    }
+	    },
+		   {
+		      "path": "pages/teacher/center",
+		      "style": {
+		        "navigationBarTitleText": "在校师生中心",
+		        "navigationBarBackgroundColor": "#ffffff",
+		        "navigationBarTextStyle": "black"
+		      }
+		    },
+		    {
+		      "path": "pages/teacher/invite",
+		      "style": {
+		        "navigationBarTitleText": "专属邀请码",
+		        "navigationBarBackgroundColor": "#ffffff",
+		        "navigationBarTextStyle": "black"
+		      }
+		    },
+		    {
+		      "path": "pages/teacher/records",
+		      "style": {
+		        "navigationBarTitleText": "我的预约",
+		        "navigationBarBackgroundColor": "#ffffff",
+		        "navigationBarTextStyle": "black"
+		      }
+		    }
 	  ],
 	  "globalStyle": {
 	    "navigationBarTextStyle": "black",
